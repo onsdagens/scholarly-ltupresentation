@@ -1,7 +1,7 @@
 # LTU Typst Beamer Template
 This repo is a work-in-progress Touying-based slides template.
 
-We are aiming for this to eventually be as close to the PowerPoint reference as possible, this is not yet the case.
+We are aiming for this to eventually be as close to the Luleå University of Technology PowerPoint template reference as possible, this is not yet the case.
 
 The theme itself lives in `ltu_touying.typ`.
 
