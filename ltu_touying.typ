@@ -25,6 +25,8 @@
 ///   If you want to customize the composer, you can pass a function to the `composer` argument. The function should receive the contents of the slide and return the content of the slide, like `#slide(composer: grid.with(columns: 2))[A][B]`.
 ///
 /// - bodies (arguments): is the contents of the slide. You can call the `slide` function with syntax like `#slide[A][B][C]` to create a slide.
+
+// Variable for the default font
 #let slide(
   config: (:),
   repeat: auto,
@@ -54,7 +56,7 @@
             fill: self.colors.primary,
             weight: "bold",
             size: 28pt,
-            font: "Arial",
+            font: ("Helvetica Neue", "Arial", "Liberation Sans"),
             utils.call-or-display(self, self.store.header),
           ),
           text(fill: self.colors.primary.lighten(65%), utils.call-or-display(
@@ -103,7 +105,7 @@
   let new-setting = body => {
     show: std.align.with(self.store.align)
     show: setting
-    set text(size: 24pt, fill: self.colors.primary, font: "Arial")
+    set text(size: 24pt, fill: self.colors.primary, font: ("Helvetica Neue", "Arial", "Liberation Sans"))
     body
   }
   touying-slide(
@@ -170,10 +172,10 @@
           inset: 0em,
           breakable: false,
           {
-            text(size: 2em, fill: self.colors.primary, font: "Arial", strong(info.title))
+            text(size: 2em, fill: self.colors.primary, font: ("Helvetica Neue", "Arial", "Liberation Sans"), strong(info.title))
             if info.subtitle != none {
               parbreak()
-              text(size: 1.2em, fill: self.colors.primary, font: "Arial", info.subtitle)
+              text(size: 1.2em, fill: self.colors.primary, font: ("Helvetica Neue", "Arial", "Liberation Sans"), info.subtitle)
             }
           },
         )
@@ -183,7 +185,7 @@
           column-gutter: 1em,
           row-gutter: 1em,
           ..info.authors.map(author => text(
-            font: "Arial",
+            font: ("Helvetica Neue", "Arial", "Liberation Sans"),
             fill: white,
             author,
           ))
