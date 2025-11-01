@@ -1,4 +1,6 @@
 name: Build Example PDF
+permissions:
+  contents: write
 
 on:
   release:
