@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Install Arial
+        run: yes | sudo apt install -y ttf-mscorefonts-installer
+
       - name: Install typst
         run: wget -O - https://github.com/typst/typst/releases/download/v0.14.0/typst-x86_64-unknown-linux-musl.tar.xz | tar xvJ
 
