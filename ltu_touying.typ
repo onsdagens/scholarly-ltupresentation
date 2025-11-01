@@ -69,7 +69,10 @@
   }
   let footer(self) = {
     set std.align(center + bottom)
-    set text(size: .4em)
+    set text(
+      size: .4em,
+      font: ("Helvetica Neue", "Arial", "Liberation Sans"),
+    )
     {
       let cell(..args, it) = components.cell(
         ..args,
