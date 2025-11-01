@@ -77,23 +77,19 @@
       let cell(..args, it) = components.cell(
         ..args,
         inset: 1mm,
-        std.align(horizon, text(fill: white, it)),
+        std.align(horizon, text(fill: rgb("#032040"), tracking: 1.25pt, weight: "bold", it)),
       )
       show: block.with(width: 100%, height: auto)
       grid(
         columns: self.store.footer-columns,
-        rows: 1.5em,
+        rows: 2.5em,
         cell(fill: self.colors.primary, utils.call-or-display(
           self,
           self.store.footer-a,
         )),
-        cell(fill: self.colors.secondary, utils.call-or-display(
+        cell(fill: self.colors.primary, utils.call-or-display(
           self,
           self.store.footer-b,
-        )),
-        cell(fill: self.colors.tertiary, utils.call-or-display(
-          self,
-          self.store.footer-c,
         )),
       )
     }
@@ -366,19 +362,14 @@
 #let ltutheme(
   aspect-ratio: "16-9",
   align: top,
-  progress-bar: true,
+  progress-bar: false,
   header: utils.display-current-heading(level: 2, style: auto),
   header-right: self => (
     box(utils.display-current-heading(level: 1)) + h(.3em) + self.info.logo
   ),
-  footer-columns: (25%, 1fr, 25%),
-  footer-a: self => self.info.author,
-  footer-b: self => if self.info.short-title == auto {
-    self.info.title
-  } else {
-    self.info.short-title
-  },
-  footer-c: self => {
+  footer-columns: (85%, 15%),
+  footer-a: self => "LULEÅ UNIVERSITY OF TECHNOLOGY",
+  footer-b: self => {
     h(1fr)
     utils.display-info-date(self)
     h(1fr)
@@ -426,7 +417,6 @@
       footer-columns: footer-columns,
       footer-a: footer-a,
       footer-b: footer-b,
-      footer-c: footer-c,
     ),
     ..args,
   )
