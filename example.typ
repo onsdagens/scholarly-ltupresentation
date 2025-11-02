@@ -10,13 +10,6 @@ Real-Time Systems",
   )
 )
 
-= Test
-#lorem(30)hi
-
-- 1
-- 2
-- 3
-
 = Aims/Content/Outcome
   - What we cover today:
     - Course Aims
@@ -31,7 +24,7 @@ Real-Time Systems",
 = Course Aims and Content
   *The student shall be able to:*
   #pause
-  #set text(size: 15pt)
+  #set text(size: 13pt)
   - Demonstrate the ability to perform *model-based* design of *small footprint* (low-powered, low-memory) distributed embedded real-time systems
     - Modelling and analysis of real-time applications under the RTIC framework
     - Power-profiling down to the micro-second/ampere
