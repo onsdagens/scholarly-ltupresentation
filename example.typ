@@ -10,7 +10,7 @@
 )
 
 = Test
-hi
+#lorem(30)hi
 
 - 1
 - 2
@@ -28,7 +28,6 @@ hi
       - The examination and grading
 
 = Course Aims and Content
-#slide[
   *The student shall be able to:*
   #pause
   #set text(size: 15pt)
@@ -50,10 +49,8 @@ hi
   #pause
   - Demonstrate the ability to understand and work with existing source code and *conduct peer-reviews*
     - We conduct peer reviews of each other's lab solutions
-]
 
 = Realization
-#slide[
   #set text(size: 18pt)
   - In other words: Lots to do!
 
@@ -70,20 +67,16 @@ hi
       - Typically 1-2 lectures per week, 1 lab session per week
       - We aim to get through the lectures by early December
       - This is to allow exchange students to finish in time, also to give you time for the labs (these will take time)
-]
 
 = Realization
-#slide[
   - We aim for lectures on Mondays and Thursdays
     - Check your schedules for collisions
     - Later down the line, we use all the available class time for lectures until we have gotten through the slides
   - We use Discord for course communication
     - This is to keep information public, and enable us to message in real-time
     - I'm available 24/7 (except before noon)
-]
 
 = Examination
-#slide[
   - Continuous examination through git peer reviews (similar to D0011E, D0013E)
     - Turn in lab on Wednesday, get assigned peer reviews
     - Turn in peer reviews on Friday
@@ -93,10 +86,8 @@ hi
 
   - Further grades - home examination
     - Pick a topic of interest within scope of the course, develop a demonstrator
-]
 
 = Why? The automotive perspective
-#slide[
   - Combustion engines require 3 things
     - Air, Fuel, Spark
   - The better we time the spark, the more of of power stroke actually produces power
@@ -105,13 +96,10 @@ hi
   - Controls timing of spark relative to piston Top Dead Center
   - Best case: improved power efficiency
   - Worst case: engine knock, premature wear and failure
-]
 
 = Why? The automotive perspective
-#slide[
-  #set align(center)
-  #image("img/ignition_ctl_240.png", height: 100%)
-]
+  //#set align(center)
+  #move(dx: 5em, image("img/ignition_ctl_240.png", height: 100%))
 
 = Why? The automotive perspective
 #slide(composer: (1fr, 1fr))[
@@ -138,7 +126,7 @@ hi
   - What's the worst case?
 
 ][
-  #set align(horizon)
+  //#set align(horizon)
   #image("img/etcs.png")
 ]
 
@@ -178,8 +166,6 @@ hi
 ]
 
 = Why? The automotive perspective
-#slide[
-  #set text(size: 19pt)
   - Volvo 240 is relatively *secure*
     - Malicious actors require physical access to the vehicle to cause harm
   - As of 2018, eCall is *required* for _type approval_
@@ -189,7 +175,7 @@ hi
   - Whether we like it or not, cars are now IoT devices, and cybersecurity is an issue
     - Further standards related cybersecurity, e.g. IEC 21434, now more or less required for type approval
       - This means more competence demand within this field is incoming
-]
+      
 = Grand Scheme of Things
 #slide[
   #image("img/iot_old.png")

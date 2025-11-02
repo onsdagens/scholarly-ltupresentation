@@ -354,8 +354,9 @@
       paper: "presentation-" + aspect-ratio,
       header-ascent: 0em,
       footer-descent: 0em,
-      margin: (top: 4em, x: 2em, y: 1em), // margins for the body
-      fill: rgb("#05325a"),
+      margin: (top: 4em, x: 1.65em, y: 1em), // margins for the body
+      // fill: rgb("#05325a"), // correct
+      fill: rgb("#032040"), // nice
     ),
     config-common(
       slide-fn: slide,
@@ -367,10 +368,14 @@
         show heading: it => {
           // So the heading is implemented using a block for spacing, a rectangle for the
           // orange bar in the left and using text as the central element
-          v(1em) + block( 
-            height: 40pt,
-            stroke: (left: 0.15em + self.colors.ltuorange),
-            v(11pt) + h(11pt) + it.body
+          move(
+            dx: -29pt,
+            dy: 0pt,
+            v(0.48em)  + block( 
+              height: 50pt,
+              stroke: (left: 0.13em + self.colors.ltuorange),
+              v(16pt) + h(22pt) + it.body
+            )
           )
         }
 
@@ -379,9 +384,11 @@
       alert: utils.alert-with-primary-color,
     ),
     config-colors(
-      ltublue: rgb("#05325a"),
+      // ltublue: rgb("#05325a"), // this is the correct one
+      ltublue: rgb("#032040"), // this is the nice one
       ltulightblue: rgb("#96afc6"),
-      ltuorange: rgb("#f15a22"),
+      //ltuorange: rgb("#f15a22"), // correct
+      ltuorange: rgb("#ff8247"), // nice
       primary: white,
       secondary: rgb("#176B87"),
       tertiary: rgb("#448C95"),
