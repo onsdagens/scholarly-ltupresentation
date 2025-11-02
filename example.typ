@@ -24,77 +24,24 @@
 == Course Aims and Content
 #slide[
   *The student shall be able to:*
-]
-== Course Aims and Content
-#slide[
-  *The student shall be able to:*
+  #pause
   #set text(size: 15pt)
   - Demonstrate the ability to perform *model-based* design of *small footprint* (low-powered, low-memory) distributed embedded real-time systems
     - Modelling and analysis of real-time applications under the RTIC framework
     - Power-profiling down to the micro-second/ampere
     - Validation of embedded software by debugging and tracing
-]
-== Course Aims and Content
-#slide[
-  *The student shall be able to:*
-  #set text(size: 15pt)
-  - Demonstrate the ability to perform *model-based* design of *small footprint* (low-powered, low-memory) distributed embedded real-time systems
-    - Modelling and analysis of real-time applications under the RTIC framework
-    - Power-profiling down to the micro-second/ampere
-    - Validation of embedded software by debugging and tracing
+  #pause
   - Demonstrate the ability to develop *memory-safe* implementations
     - Rust, memory safety, ensuring defined behavior, etc.
     - Rust on bare-metal hardware, abstractions and ecosystem
     - Tooling for stack memory usage analysis
-]
-== Course Aims and Content
-#slide[
-  *The student shall be able to:*
-  #set text(size: 15pt)
-  - Demonstrate the ability to perform *model-based* design of *small footprint* (low-powered, low-memory) distributed embedded real-time systems
-    - Modelling and analysis of real-time applications under the RTIC framework
-    - Power-profiling down to the micro-second/ampere
-    - Validation of embedded software by debugging and tracing
-  - Demonstrate the ability to develop *memory-safe* implementations
-    - Rust, memory safety, ensuring defined behavior, etc.
-    - Rust on bare-metal hardware, abstractions and ecosystem
-    - Tooling for stack memory usage analysis
+  #pause
   - Apply *formal methods* for *verification* of *functional* and *non-functional* (e.g. real-time) properties of distributed embedded systems.
     - Functional verification and non-functional analysis using symbolic execution
-]
-== Course Aims and Content
-#slide[
-  *The student shall be able to:*
-  #set text(size: 15pt)
-  - Demonstrate the ability to perform *model-based* design of *small footprint* (low-powered, low-memory) distributed embedded real-time systems
-    - Modelling and analysis of real-time applications under the RTIC framework
-    - Power-profiling down to the micro-second/ampere
-    - Validation of embedded software by debugging and tracing
-  - Demonstrate the ability to develop *memory-safe* implementations
-    - Rust, memory safety, ensuring defined behavior, etc.
-    - Rust on bare-metal hardware, abstractions and ecosystem
-    - Tooling for stack memory usage analysis
-  - Apply *formal methods* for *verification* of *functional* and *non-functional* (e.g. real-time) properties of distributed embedded systems.
-    - Functional verification and non-functional analysis using symbolic execution
+  #pause
   - Demonstrate insight into *current research* and development work in the field of embedded and distributed real-time systems, as well as the ability to orally present this knowledge
     - RTIC and Symex
-]
-== Course Aims and Content
-#slide[
-  *The student shall be able to:*
-  #set text(size: 15pt)
-  - Demonstrate the ability to perform *model-based* design of *small footprint* (low-powered, low-memory) distributed embedded real-time systems
-    - Modelling and analysis of real-time applications under the RTIC framework
-    - Power-profiling down to the micro-second/ampere
-    - Validation of embedded software by debugging and tracing
-  - Demonstrate the ability to develop *memory-safe* implementations
-    - Rust, memory safety, ensuring defined behavior, etc.
-    - Rust on bare-metal hardware, abstractions and ecosystem
-    - Tooling for stack memory usage analysis
-  - Apply *formal methods* for *verification* of *functional* and *non-functional* (e.g. real-time) properties of distributed embedded systems.
-    - Functional verification and non-functional analysis using symbolic execution
-  - Demonstrate insight into *current research* and development work in the field of embedded and distributed real-time systems, as well as the ability to orally present this knowledge
-    - RTIC and Symex
+  #pause
   - Demonstrate the ability to understand and work with existing source code and *conduct peer-reviews*
     - We conduct peer reviews of each other's lab solutions
 ]
