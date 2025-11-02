@@ -1,7 +1,3 @@
-// University theme
-
-// Originally contributed by Pol Dellaiera - https://github.com/drupol
-
 #import "@preview/touying:0.6.1": *
 
 /// Default slide function for the presentation.
@@ -78,7 +74,7 @@
       let cell(..args, it) = components.cell(
         ..args,
         inset: 1mm,
-        std.align(horizon, text(fill: rgb("#05325a"), tracking: 1.25pt, weight: "bold", it)),
+        std.align(horizon, text(fill: self.colors.ltublue, tracking: 1.25pt, weight: "bold", it)),
       )
       show: block.with(width: 100%, height: auto)
       grid(
@@ -225,48 +221,6 @@
 })
 
 
-/// New section slide for the presentation. You can update it by updating the `new-section-slide-fn` argument for `config-common` function.
-///
-/// Example: `config-common(new-section-slide-fn: new-section-slide.with(numbered: false))`
-///
-/// - config (dictionary): is the configuration of the slide. Use `config-xxx` to set individual configurations for the slide. To apply multiple configurations, use `utils.merge-dicts` to combine them.
-///
-/// - level (int, none): is the level of the heading.
-///
-/// - numbered (boolean): is whether the heading is numbered.
-///
-/// - body (auto): is the body of the section. This will be passed automatically by Touying.
-#let new-section-slide(
-  config: (:),
-  level: 1,
-  numbered: true,
-  body,
-) = touying-slide-wrapper(self => {
-  let slide-body = {
-    set std.align(horizon)
-    show: pad.with(20%)
-    set text(size: 1.5em, fill: self.colors.primary, weight: "bold")
-    stack(
-      dir: ttb,
-      spacing: .65em,
-      utils.display-current-heading(level: level, numbered: numbered),
-      block(
-        height: 2pt,
-        width: 100%,
-        spacing: 0pt,
-        components.progress-bar(
-          height: 2pt,
-          self.colors.primary,
-          self.colors.primary-light,
-        ),
-      ),
-    )
-    body
-  }
-  touying-slide(self: self, config: config, slide-body)
-})
-
-
 /// Focus on some content.
 ///
 /// Example: `#focus-slide[Wake up!]`
@@ -383,9 +337,9 @@
   aspect-ratio: "16-9",
   align: top,
   progress-bar: false,
-  header: utils.display-current-heading(level: 2, style: auto),
+  header: utils.display-current-heading(level: 1, style: auto),
   header-right: self => (
-    box(utils.display-current-heading(level: 1)) + h(.3em) + self.info.logo
+    box(utils.display-current-heading(level: 2)) + h(.3em) + self.info.logo
   ),
   footer-columns: (90%, 10%),
   footer-a: self => "     LULEÅ UNIVERSITY OF TECHNOLOGY", // yep spacing with spaces, i am desperate
@@ -398,21 +352,27 @@
   show: touying-slides.with(
     config-page(
       paper: "presentation-" + aspect-ratio,
-      header-ascent: 1em,
+      header-ascent: 0em,
       footer-descent: 0em,
-      margin: (top: 2.5em, bottom: 1.25em, x: 2em),
-      //fill: rgb("#132541"), // 19 37 65
+      margin: (top: 4em, x: 2em, y: 1em), // margins for the body
       fill: rgb("#05325a"),
     ),
     config-common(
       slide-fn: slide,
-      new-section-slide-fn: new-section-slide,
     ),
     config-methods(
       init: (self: none, body) => {
         set text(size: 25pt)
-        show heading.where(level: 3): set text(fill: self.colors.primary)
-        show heading.where(level: 4): set text(fill: self.colors.primary)
+        // it captures all parameters of the heading object
+        show heading: it => {
+          // So the heading is implemented using a block for spacing, a rectangle for the
+          // orange bar in the left and using text as the central element
+          v(1em) + block( 
+            height: 40pt,
+            stroke: (left: 0.15em + self.colors.ltuorange),
+            v(11pt) + h(11pt) + it.body
+          )
+        }
 
         body
       },
@@ -421,6 +381,7 @@
     config-colors(
       ltublue: rgb("#05325a"),
       ltulightblue: rgb("#96afc6"),
+      ltuorange: rgb("#f15a22"),
       primary: white,
       secondary: rgb("#176B87"),
       tertiary: rgb("#448C95"),

@@ -9,8 +9,14 @@
   )
 )
 
-== Aims/Content/Outcome
-#slide[
+= Test
+hi
+
+- 1
+- 2
+- 3
+
+= Aims/Content/Outcome
   - What we cover today:
     - Course Aims
       - Intended Learning Outcomes
@@ -20,8 +26,8 @@
       - The course format
     - Examination
       - The examination and grading
-]
-== Course Aims and Content
+
+= Course Aims and Content
 #slide[
   *The student shall be able to:*
   #pause
@@ -46,7 +52,7 @@
     - We conduct peer reviews of each other's lab solutions
 ]
 
-== Realization
+= Realization
 #slide[
   #set text(size: 18pt)
   - In other words: Lots to do!
@@ -66,7 +72,7 @@
       - This is to allow exchange students to finish in time, also to give you time for the labs (these will take time)
 ]
 
-== Realization
+= Realization
 #slide[
   - We aim for lectures on Mondays and Thursdays
     - Check your schedules for collisions
@@ -76,7 +82,7 @@
     - I'm available 24/7 (except before noon)
 ]
 
-== Examination
+= Examination
 #slide[
   - Continuous examination through git peer reviews (similar to D0011E, D0013E)
     - Turn in lab on Wednesday, get assigned peer reviews
@@ -89,7 +95,7 @@
     - Pick a topic of interest within scope of the course, develop a demonstrator
 ]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide[
   - Combustion engines require 3 things
     - Air, Fuel, Spark
@@ -101,13 +107,13 @@
   - Worst case: engine knock, premature wear and failure
 ]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide[
   #set align(center)
   #image("img/ignition_ctl_240.png", height: 100%)
 ]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide(composer: (1fr, 1fr))[
   #set text(size: 19pt)
   - That went well, 240 engines are famous for being generally bulletproof.
@@ -120,7 +126,7 @@
   #image("img/240.png")
 ]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide[
   #set text(size: 19pt)
   - So far so good, last step is air
@@ -136,7 +142,7 @@
   #image("img/etcs.png")
 ]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide[
   #set text(size: 19pt)
   - The computer can hold the throttle open *against driver intention*
@@ -147,13 +153,13 @@
 
 ][]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide[
   #set text(size: 19pt)
   - Now what? Surely we reevaluate?
 ]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide[
   #set text(size: 18pt)
   - Now what? Surely we reevaluate?
@@ -171,7 +177,7 @@
   #image("img/volvo_arch.png")
 ]
 
-== Why? The automotive perspective
+= Why? The automotive perspective
 #slide[
   #set text(size: 19pt)
   - Volvo 240 is relatively *secure*
@@ -184,14 +190,14 @@
     - Further standards related cybersecurity, e.g. IEC 21434, now more or less required for type approval
       - This means more competence demand within this field is incoming
 ]
-== Grand Scheme of Things
+= Grand Scheme of Things
 #slide[
   #image("img/iot_old.png")
 ][
   #image("img/iot_new.png")
 ]
 
-== Grand Scheme of Things
+= Grand Scheme of Things
 #slide[
   By the year 2035, spending on IoT hardware and services will reach a trillion dollars per annum.
 
@@ -204,17 +210,17 @@
   #image("img/arm_softbank.png")
 ]
 
-== Memory Safety and Security
+= Memory Safety and Security
 #slide[
   #image("img/microsoft.png")
   Microsoft Security Response Center
 ]
-== Known Exploited Vulnerabilities
+= Known Exploited Vulnerabilities
 #slide[
   #set align(center)
   #image("img/KEV.png")
 ]
-== Why?
+= Why?
 #slide[
   - Memory safe languages around for 20+ years
     - Java
@@ -226,7 +232,7 @@
     - Performance critical, systems level (OS or bare-metal embedded)
   #image("img/segfault.png")
 ]
-== Why?
+= Why?
 #slide[
   #set text(size: 19pt)
   - Rust - memory safety with no OS or Garbage Collection(GC)
@@ -246,7 +252,7 @@
     - Bottom-line, again, this is a question of competence (*you*)
 ]
 
-== Rust
+= Rust
 #slide[
   - Catches most *undefined behavior* (*UB*) at compile-time
     - Memory unsafety is a member of this set
@@ -258,7 +264,7 @@
     - Through this, Rust ensures *defined behavior* for (_safe_) code (more on _unsafe Rust_ later)
 ]
 
-== Program Correctness
+= Program Correctness
 #slide[
   - Think about input/output relationship of our program
   - *Total correctness* *iff* this relationship *always holds*
@@ -271,7 +277,7 @@
   - What about liveness? (recall *panic*)
 ]
 
-== Liveness ruined by panic
+= Liveness ruined by panic
 #slide[
   - *Availability*, i.e. mean time between failures
 
@@ -284,7 +290,7 @@
     - So what can we do?
 ]
 
-== Mitigating risk for panic
+= Mitigating risk for panic
 #slide[
   #set raw(theme: "halcyon.tmTheme")
   - Rust panic is *last resort* for avoiding UB
@@ -297,7 +303,7 @@
     - So what do we do?
 ]
 
-== Traditional testing
+= Traditional testing
 #slide[
   #set text(size: 18pt)
   - The developer may manually write:
@@ -320,7 +326,7 @@
   ```
 ]
 
-== Traditional testing
+= Traditional testing
 #slide[
   - Pros:
     - Well understood approach
@@ -331,7 +337,7 @@
     - Even 100% code coverage may not be enough
 ]
 
-== Fuzzing and prop-test
+= Fuzzing and prop-test
 #slide[
   #set text(size: 23pt)
   - Libraries and tools for test generation
@@ -345,7 +351,7 @@
     - Again, no way of knowing
 ]
 
-== Symbolic execution
+= Symbolic execution
 #slide[
   - Dynamic analysis based on formal methods (Satisfiability theory)
     - Dynamic here means we actually run the code
@@ -359,7 +365,7 @@
     - Huge improvement to *trust*, *safety* and *liveness*
 ]
 
-== Functional correctness via symbolic execution
+= Functional correctness via symbolic execution
 #slide[
   - We can introduce bounds on input/output/variable state through *assertions*
   #set raw(theme: "halcyon.tmTheme")
@@ -370,7 +376,7 @@
     - By showing no panic, we can omit these checks, improving performance
 ]
 
-== Symbolic execution
+= Symbolic execution
 #slide[
   - Is this too good to be true?
 
@@ -385,7 +391,7 @@
     - Back to the drawing board...
 ]
 
-== Symbolic execution
+= Symbolic execution
 #slide[
   - We will later discuss
     - The theory behind this
@@ -396,7 +402,7 @@
     - Get some hands-on experience
 ]
 
-== Stack
+= Stack
 #slide[
   - Rust comes with the guarantee to either
     - Run with defined behavior
@@ -406,7 +412,7 @@
     - This leads to *undefined behavior*, breaking the Rust guarantees
 ]
 
-== Stack
+= Stack
 #slide[
   - In this course we will look at:
     - Run-time stack usage analysis
@@ -415,7 +421,7 @@
       - Execution analysis through symbolic execution
 ]
 
-== Todo now!
+= Todo now!
 #slide[
   - Join the course Discord
     - We use this for *all* communication related to the course
@@ -424,7 +430,7 @@
   - Check your schedule for collisions
 ]
 
-== Todo until next session
+= Todo until next session
 #slide[
   - Recommended:
     - Prepare a Linux installation
