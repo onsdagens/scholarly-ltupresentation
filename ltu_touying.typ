@@ -78,7 +78,7 @@
       let cell(..args, it) = components.cell(
         ..args,
         inset: 1mm,
-        std.align(horizon, text(fill: rgb("#032040"), tracking: 1.25pt, weight: "bold", it)),
+        std.align(horizon, text(fill: rgb("#05325a"), tracking: 1.25pt, weight: "bold", it)),
       )
       show: block.with(width: 100%, height: auto)
       grid(
@@ -402,7 +402,7 @@
       footer-descent: 0em,
       margin: (top: 2.5em, bottom: 1.25em, x: 2em),
       //fill: rgb("#132541"), // 19 37 65
-      fill: rgb("#032040"),
+      fill: rgb("#05325a"),
     ),
     config-common(
       slide-fn: slide,
@@ -419,7 +419,7 @@
       alert: utils.alert-with-primary-color,
     ),
     config-colors(
-      ltublue: rgb("#032040"),
+      ltublue: rgb("#05325a"),
       ltulightblue: rgb("#96afc6"),
       primary: white,
       secondary: rgb("#176B87"),
