@@ -420,5 +420,8 @@
   )
   title-slide()
   body
-  final-slide()
+  focus-slide(
+    background-img: image("template_assets/LTU_eng_vit.png", width: 30%, height: 30%),
+    "" // this is our needed, but invisible content
+  )
 }
