@@ -70,7 +70,7 @@
   let footer(self) = {
     set std.align( bottom)
     set text(
-      size: .4em,
+      size: .45em,
       font: ("Helvetica Neue", "Arial", "Liberation Sans"),
     )
     {
@@ -369,9 +369,9 @@
     box(utils.display-current-heading(level: 1)) + h(.3em) + self.info.logo
   ),
   footer-columns: (90%, 10%),
-  footer-a: self => "LULEÅ UNIVERSITY OF TECHNOLOGY",
+  footer-a: self => "     LULEÅ UNIVERSITY OF TECHNOLOGY", // yep spacing with spaces, i am desperate
   footer-b: self => {
-    context utils.slide-counter.display()
+    align(right, text(fill: self.colors.ltulightblue, context utils.slide-counter.display()))
   },
   ..args,
   body,
@@ -401,6 +401,7 @@
     ),
     config-colors(
       ltublue: rgb("#032040"),
+      ltulightblue: rgb("#96afc6"),
       primary: white,
       secondary: rgb("#176B87"),
       tertiary: rgb("#448C95"),
