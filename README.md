@@ -7,4 +7,6 @@ The theme itself lives in `ltu_touying.typ`.
 
 We've included some lecture slides in `example.typ` as a usage example
 
+A rendered .pdf of `example.typ` using the latest commit deemed release-worthy is available under releases.
+
 `halcyon.tmTheme` contains an example syntax highlighting theme (in this case [Halcyon](https://github.com/bchiang7/Halcyon))
