@@ -101,7 +101,7 @@
   let new-setting = body => {
     show: std.align.with(self.store.align)
     show: setting
-    set text(size: 24pt, fill: self.colors.primary, font: ("Helvetica Neue", "Arial", "Liberation Sans"))
+    set text(size: 20pt, fill: self.colors.primary, font: ("Helvetica Neue", "Arial", "Liberation Sans"))
     body
   }
   touying-slide(
@@ -173,7 +173,7 @@
           {
             v(1em)
             set text(size: 1.1em, fill: self.colors.ltublue, font: ("Helvetica Neue", "Arial", "Liberation Sans")) 
-              move(dx:-2.1em, align(start,text(info.title)))
+              move(dx:0.4em, align(start,text(info.title)))
             if info.subtitle != none {
               v(0.1em)
               text(info.subtitle)
@@ -185,7 +185,7 @@
               columns: (1fr,) * calc.min(info.authors.len(), 3),
               column-gutter: 1em,
               row-gutter: 1em,
-              ..info.authors.map(author => move(dx: -3.1em, align(left, text( author,  ))))
+              ..info.authors.map(author => move(dx: -7.2em, align(left, text( author,  ))))
             )
             v(1em)
             if info.institution != none {
@@ -375,6 +375,10 @@
     config-methods(
       init: (self: none, body) => {
         set text(size: 25pt)
+        // ident bullet lists by 20pt, I like it that way
+        show list: it => {
+          move(dx: 20pt, it)
+        }
         // it captures all parameters of the heading object
         show heading: it => {
           // So the heading is implemented using a block for spacing, a rectangle for the
