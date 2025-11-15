@@ -414,7 +414,7 @@
 #slide[
   - Recommended:
     - Prepare a Linux installation
-      - I use Arch, so if you expect needing help, this is the easiest option
+      - I use Arch btw, so if you expect needing help, this is the easiest option
 
   - Required:
     - Install Rust toolchain
