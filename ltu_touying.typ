@@ -39,32 +39,21 @@
   }
   let header(self) = {
     set std.align(top)
-    grid(
-      rows: (auto, auto),
-      if self.store.progress-bar {
-        components.progress-bar(
-          height: 2pt,
-          self.colors.primary,
-          self.colors.tertiary,
-        )
-      },
-      block(
-        inset: (x: 6%, y: 0.5cm),
-        components.left-and-right(
-          text(
-            fill: self.colors.primary,
-            weight: "bold",
-            size: 28pt,
-            font: ("Helvetica Neue", "Arial", "Liberation Sans"),
-            utils.call-or-display(self, self.store.header),
-          ),
-          text(fill: self.colors.primary.lighten(65%), utils.call-or-display(
-            self,
-            self.store.header-right,
-          )),
-        ),
-      ),
+    set text(fill: self.colors.primary, weight: "bold", size: 28pt, font: ("Helvetica Neue", "Arial", "Liberation Sans"))
+    //rect(fill: self.colors.ltuorange, width: 1.5mm, height: 20mm)[#align(horizon, "Hi")]
+    block(inset: (left: 1cm), fill: self.colors.ltuorange, width: 1.5mm, height: 20mm, {
+        set std.align(horizon)
+        "Hippopotomonstrosesquipedaliophobie"
+    }
     )
+          //rect(fill: self.colors.ltuorange, width: 1.5mm, height: 20mm),
+          //text(
+          //  fill: self.colors.primary,
+          //  weight: "bold",
+          //  size: 28pt,
+          //  font: ("Helvetica Neue", "Arial", "Liberation Sans"),
+          //  utils.call-or-display(self, self.store.header),
+          //)
   }
   let footer(self) = {
     set std.align( bottom)
@@ -284,21 +273,6 @@
         show list: it => {
           move(dx: 20pt, it)
         }
-        // it captures all parameters of the heading object
-        show heading: it => {
-          // So the heading is implemented using a block for spacing, a rectangle for the
-          // orange bar in the left and using text as the central element
-          move(
-            dx: -29pt,
-            dy: 0pt,
-            v(0.48em)  + block( 
-              height: 50pt,
-              stroke: (left: 0.13em + self.colors.ltuorange),
-              v(16pt) + h(22pt) + it.body
-            )
-          )
-        }
-
         body
       },
       alert: utils.alert-with-primary-color,
