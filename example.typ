@@ -1,7 +1,7 @@
 #import "@preview/touying:0.6.1": *
-#import "ltu_touying.typ": *
+#import "template/ltu-theme.typ": ltu-theme
 
-#show: ltutheme.with(
+#show: ltu-theme.with(
   config-info(
     //subtitle: "D7020E - Robust and Energy Efficient Real-Time Systems",
     title: "Robust and Energy Efficient",
