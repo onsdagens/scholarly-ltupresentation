@@ -31,13 +31,6 @@
       title: none,
       footer: none,
     ),
-    config-info(
-      title: "D7020E - Robust and Energy Efficient Real-Time Systems",
-      subtitle: "D7020E",
-      authors: ("Pawel Dzialo", "Prof. Per Lindgren"),
-      // date: "1.1.1970",
-      //    institution: "Luleå University of Technology",
-    ),
     ..args,
     ltu-title-slide() + body + ltu-final-slide(),
   )
