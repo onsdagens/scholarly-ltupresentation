@@ -10,3 +10,18 @@ We've included some lecture slides in `example.typ` as a usage example
 A rendered .pdf of `example.typ` using the latest commit deemed release-worthy is available under releases.
 
 `halcyon.tmTheme` contains an example syntax highlighting theme (in this case [Halcyon](https://github.com/bchiang7/Halcyon))
+
+## Licensing
+
+All source code (including code snippets) is licensed under either of
+
+- Apache License, Version 2.0 ([LICENSE-APACHE](https://github.com/onsdagens/ltu-beamer-template-typst/blob/master/LICENSE-APACHE) or https://www.apache.org/licenses/LICENSE-2.0)
+- MIT license ([LICENSE-MIT](https://github.com/onsdagens/ltu-beamer-template-typst/blob/master/LICENSE-MIT) or https://opensource.org/licenses/MIT)
+
+at your option.
+
+Assets like images are property of LTU under unclear license terms, use at your own risk.
+
+### Contributions
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be licensed as above, without any additional terms or conditions.
