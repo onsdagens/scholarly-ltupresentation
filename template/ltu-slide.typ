@@ -1,4 +1,5 @@
 #import "@preview/touying:0.6.1": *
+#import "ltu-colors.typ": *
 
 #let ltu-slide(title: auto, ..args) = touying-slide-wrapper(self => {
   if title != auto {
@@ -39,7 +40,7 @@
     ) // box, important to stretch complete space
   }
   let ltu = "Luleå University of Technology"
-  let pagenr = context utils.slide-counter.display()
+  let pagenr = text(fill: main-figure, context utils.slide-counter.display())
   let footer(self) = {
     box(
       width: 100%,
