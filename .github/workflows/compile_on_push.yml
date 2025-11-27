@@ -15,7 +15,7 @@ jobs:
       run: wget -O - https://github.com/typst/typst/releases/download/v0.14.0/typst-x86_64-unknown-linux-musl.tar.xz | tar xvJ
 
     - name: Download dubious .exe from the internet (Arial font)
-      run: http://downloads.sourceforge.net/corefonts/arial32.exe
+      run: wget http://downloads.sourceforge.net/corefonts/arial32.exe
 
     - name: Extract dubious .exe from the internet
       run: 7z x arial32.exe
