@@ -46,11 +46,11 @@
       width: 100%,
       height: 100%,
       inset: 0mm,
-      fill: self.colors.white, // the footer is white
+      fill: main-white,
       align(
         horizon,
         // I reused btd for the x padding, need to see whether thats nice or not
-        text(fill: self.colors.ltu-blue, size: 10pt, weight: "bold", stack(
+        text(fill: main-blue, size: 10pt, weight: "bold", stack(
           dir: ltr,
           h(btd),
           text(tracking: 1.25pt, upper(ltu)),
