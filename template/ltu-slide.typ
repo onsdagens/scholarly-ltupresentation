@@ -1,4 +1,5 @@
 #import "@preview/touying:0.6.1": *
+#import "ltu-colors.typ": *
 
 #let ltu-slide(title: auto, ..args) = touying-slide-wrapper(self => {
   if title != auto {
@@ -19,7 +20,7 @@
   let tm = (cy + bh) / (1 - ha) // top margin
   let xm = btd + bw + cx // x-margin, we are only interested in left, x is only for symmetry
   let sl = btd + bw // shift  left
-  let bar = rect(width: bw, height: bh, fill: self.colors.ltu-orange)
+  let bar = rect(width: bw, height: bh, fill: main-orange)
   let tab = align(
     horizon,
     stack(
@@ -39,17 +40,17 @@
     ) // box, important to stretch complete space
   }
   let ltu = "Luleå University of Technology"
-  let pagenr = context utils.slide-counter.display()
+  let pagenr = text(fill: main-figure, context utils.slide-counter.display())
   let footer(self) = {
     box(
       width: 100%,
       height: 100%,
       inset: 0mm,
-      fill: self.colors.white, // the footer is white
+      fill: main-white,
       align(
         horizon,
         // I reused btd for the x padding, need to see whether thats nice or not
-        text(fill: self.colors.ltu-blue, size: 10pt, weight: "bold", stack(
+        text(fill: main-blue, size: 10pt, weight: "bold", stack(
           dir: ltr,
           h(btd),
           text(tracking: 1.25pt, upper(ltu)),
