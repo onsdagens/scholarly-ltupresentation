@@ -38,7 +38,8 @@
       move(dx: -sl, tab), // move, shifts to the left
     ) // box, important to stretch complete space
   }
-  let ltu = "Luleå University of Technology"
+
+  let ltu = "   Luleå University of Technology"
   let pagenr = text(fill: main-figure, context utils.slide-counter.display())
   let footer(self) = {
     box(
@@ -49,13 +50,12 @@
       align(
         horizon,
         // I reused btd for the x padding, need to see whether thats nice or not
-        text(fill: main-blue, size: 10pt, weight: "bold", stack(
+        text(fill: main-blue, size: 9pt, weight: "bold", stack(
           dir: ltr,
-          h(btd),
+          h(2.5mm),
           text(tracking: 3pt, upper(ltu)),
           h(1fr),
-          pagenr,
-          h(btd),
+          box(width: 15.29mm, align(center + horizon, pagenr)),
         )),
       ), // align
     ) // box
@@ -65,7 +65,7 @@
     config-page(
       header: header,
       footer: footer,
-      margin: (top: tm, x: xm, bottom: 7mm),
+      margin: (top: tm, x: xm, bottom: 9.69mm),
       header-ascent: ha * 100%,
       footer-descent: 0mm, // rationale: the footer "pads" itself by its horizontal alignment
     ),
