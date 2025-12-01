@@ -1,8 +1,5 @@
 #import "@preview/touying:0.6.1": *
-#import "template/ltu-theme.typ": ltu-slide, ltu-theme
-#import "template/ltu-empty-slide.typ": ltu-empty-slide
-#import "template/ltu-colors.typ": *
-
+#import "@local/kraftpunkt-ltu:0.1.0": ltu-theme, ltu-colors, ltu-empty-slide
 
 #show: ltu-theme.with(
   config-info(
@@ -50,11 +47,6 @@ This is appears separately\
 Here is a code snippet with highlighting:\ ```Rust let b = if a != 0 {100/a} else {100}```
 
 = Double column slide
-#ltu-slide[
-  - Demonstrate the ability to perform *model-based* design of *small footprint* (low-powered, low-memory) distributed embedded real-time systems
-  - Modelling and analysis of real-time applications under the RTIC framework
-  // These following two brackets need to be on the same line:
-][
   - Power-profiling down to the micro-second/ampere
   - Validation of embedded software by debugging and tracing
 ]
