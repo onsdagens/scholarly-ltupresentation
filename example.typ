@@ -24,7 +24,7 @@ _italic_ text
 Math mode: $E=m c^2$ \
 References @dijkstra
 
-#ltu-empty-slide()[#figure(image("random_img.png", height: 90%), caption: [Image on empty slide])]
+#ltu-empty-slide()
 
 = Course Aims and Content
 Using `#pause` splits the content over multiple slides
