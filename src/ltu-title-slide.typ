@@ -1,5 +1,4 @@
 #import "@preview/touying:0.6.1": *
-#import "autosize.typ": autosize
 #import "ltu-colors.typ": *
 
 #let ltu-title-slide(
