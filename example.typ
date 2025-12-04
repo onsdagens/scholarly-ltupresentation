@@ -1,6 +1,8 @@
 #import "@preview/touying:0.6.1": *
 #import "template/ltu-theme.typ": ltu-slide, ltu-theme
 #import "template/ltu-empty-slide.typ": ltu-empty-slide
+#import "template/ltu-colors.typ": *
+
 
 #show: ltu-theme.with(
   config-info(
@@ -11,7 +13,14 @@
     // institution: "Luleå University of Technology",
   ),
 )
-
+= My Title
+- My bullet
+- My bullet
+  - My subbullet
+    - My again subbullet
+      - My fourth subbullet
+        - Stop this
+          - Hello
 = Heading
 This is the example slide for using:
 - Bullet points
@@ -21,9 +30,16 @@ This is the example slide for using:
 _italic_ text
 + Numbered lists
 + Number 2
-Math mode: $E=m c^2$ \
+Math mode: $E=m c^2$
 References @dijkstra
 
+= This slide features bullets
+- on various indentation levels
+  - such as two level nesting
+    - or three levels of nesting
+      - what about four?
+        - five? thats enough for sure
+        
 #ltu-empty-slide()
 
 = Course Aims and Content
