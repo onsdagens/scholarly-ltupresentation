@@ -26,6 +26,7 @@
 
     context {
       if list-counter.get().first() == 1 {
+        v(0.3em)
         // We had left this one here, i'm not sure what it contributes,
         // probably we can comment it out and reinstate when we figure out what it breaks
         //set par(leading: 0.77em)
