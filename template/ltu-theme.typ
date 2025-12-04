@@ -30,7 +30,7 @@
         // probably we can comment it out and reinstate when we figure out what it breaks
         //set par(leading: 0.77em)
 
-        set list(indent: 0.316em, body-indent: 0.23em, spacing: 0.78em)
+        set list(indent: 0.312em, body-indent: 0.23em, spacing: 0.78em)
           text(size: 24pt, it) 
       } else if list-counter.get().first() == 2  {
         set par(leading: 0.1em)
