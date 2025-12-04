@@ -38,6 +38,7 @@
   body,
 ) = {
   // main text setting
+  set strong(delta: 0)
   set text(
     font: "Arial",
     fill: main-white,
