@@ -56,6 +56,31 @@ However, it is not yet known how or why this works. In case you want to use some
 #box(width: 1fr)[First column]
 #box(width: 1fr)[Second Column]
 
+= Color Palette
+#grid(
+  columns: (1fr, 1fr, 1fr), gutter: 15pt,
+  ..ltu-colors
+    .pairs()
+    .map(
+      it => align(horizon, stack(
+        dir: ltr,
+        box(
+          width: 3cm,
+          height: 1.5cm,
+          fill: it.at(1),
+          stroke: 2pt + black,
+          radius: 5pt,
+        ),
+        h(1em),
+        text(
+          font: "DejaVu Sans Mono",
+          size: 15pt,
+          bottom-edge: "bounds",
+          it.at(0),
+        ),
+      )),
+    )
+)
 #pagebreak()
 
 = Bibliography

@@ -7,6 +7,32 @@
 
 #let ltu-empty-slide = ltu-empty-slide
 
+#let ltu-colors = (
+  main-white: main-white,
+  main-background-blue: main-background-blue,
+  main-blue: main-blue,
+  main-figure: main-figure,
+  main-line: main-line,
+  main-orange: main-orange,
+  tema1: tema1,
+  tema2: tema2,
+  tema3: tema3,
+  tema4: tema4,
+  tema5: tema5,
+  tema6: tema6,
+  palette1: palette1,
+  palette2: palette2,
+  palette3: palette3,
+  palette4: palette4,
+  palette5: palette5,
+  palette6: palette6,
+  palette7: palette7,
+  palette8: palette8,
+  palette9: palette9,
+)
+
+
+
 #let ltu-theme(
   ..args,
   body,
