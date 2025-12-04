@@ -18,23 +18,31 @@
   set par(spacing: 1.33341em)
 
   // bulletpoints
-  set list(body-indent: 0.13em, marker: move(dy: -0.15em, text(1.3em, fill: main-white, sym.square.filled.tiny))) // There is normal, .tiny (25AA), .small (25FE), .medium (25FC), .big (2B1B), my measurements were based on tiny i believe
+  set list(indent: 0.06em,body-indent: 0.13em, spacing: 1em, marker: move(dy: -0.15em, text(size: 1.3em, fill: main-white, sym.square.filled.tiny))) // There is normal, .tiny (25AA), .small (25FE), .medium (25FC), .big (2B1B), my measurements were based on tiny i believe
   // Manual counter for decreasing bullet point size, taken from forum
   let list-counter = counter("list")
   show list: it => {
     list-counter.step()
 
     context {
-      set list(body-indent: 0.22em) if list-counter.get().first() == 1
-      set list(body-indent: 0.32em) if list-counter.get().first() == 2
-      set list(body-indent: 0.38em) if list-counter.get().first() == 3
-      set list(body-indent: 0.40em) if list-counter.get().first() >= 4
+      if list-counter.get().first() == 1 {
+        // We had left this one here, i'm not sure what it contributes,
+        // probably we can comment it out and reinstate when we figure out what it breaks
+        //set par(leading: 0.77em)
 
-      set text(20pt) if list-counter.get().first() == 2
-      set text(18pt) if list-counter.get().first() == 3
-      set text(16pt) if list-counter.get().first() >= 4
-
-      it
+        set list(indent: 0.310em, body-indent: 0.235em, spacing: 0.79em)
+          text(size: 24pt, it) 
+      } else if list-counter.get().first() == 2  {
+        set par(leading: 0.1em)
+        set list(indent: 0.25em, body-indent: 0.32em)
+        text(size: 20pt, it)
+      } else if list-counter.get().first() == 3 {
+        set list(indent: 0.23em, body-indent: 0.38em)
+        text(size: 18pt, it)
+      } else {
+        set list(indent: 0.23em, body-indent: 0.40em)
+        text(size: 16pt, it)
+      }
     }
     list-counter.update(i => i - 1)
   }
