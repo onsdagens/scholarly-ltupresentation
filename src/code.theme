@@ -98,6 +98,49 @@
         <string>#8695b799</string>
       </dict>
     </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Compiler error</string>
+      <key>scope</key>
+      <string>compmsg.error</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+        <key>foreground</key>
+        <string>#c72a49</string>
+      </dict>
+    </dict>
+    
+    <dict>
+      <key>name</key>
+      <string>Compiler symbols</string>
+      <key>scope</key>
+      <string>compmsg.symbols</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+        <key>foreground</key>
+        <string>#35b3ff</string>
+      </dict>
+    </dict>
+    
+    <dict>
+      <key>name</key>
+      <string>Compiler warning</string>
+      <key>scope</key>
+      <string>compmsg.warn</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+        <key>foreground</key>
+        <string>#ff8247</string>
+      </dict>
+    </dict>
+
     <dict>
       <key>name</key>
       <string>Variable</string>
