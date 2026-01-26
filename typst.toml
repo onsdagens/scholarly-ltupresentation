@@ -1,6 +1,6 @@
 [package]
 name = "scholarly-ltupresentation"
-version = "0.3.2"
+version = "0.4.0"
 entrypoint = "src/ltu-theme.typ"
 authors = ["<@onsdagens>", "<@tim-ufer>", "<@mxmxchere>"]
 license = "MIT AND Apache-2.0"
